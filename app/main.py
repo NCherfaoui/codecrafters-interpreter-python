@@ -34,6 +34,20 @@ def main():
             print("LEFT_BRACE { null")
         if c == "}":
             print("RIGHT_BRACE } null")
+        if c == ",":
+            print("COMMA , null")
+        if c == ".":
+            print("DOT . null")
+        if c == "-":
+            print("MINUS - null")
+        if c == "+":
+            print("PLUS + null")
+        if c == ";":
+            print("SEMICOLON ; null")
+        if c == "/":
+            print("DIV / null")
+        if c == "*":
+            print("MULT * null")
     print("EOF  null")
 if __name__ == "__main__":
     main()
