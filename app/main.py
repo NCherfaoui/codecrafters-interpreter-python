@@ -49,7 +49,7 @@ def main():
         if c == "*":
             print("STAR * null")
         else:
-            print(f"Error: Unexpected character: {c}")
+            print(f"[LINE {line_number}] Error: Unexpected character: {c}")
     print("EOF  null")
 if __name__ == "__main__":
     main()
