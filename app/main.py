@@ -48,14 +48,12 @@ def main():
                 print("PLUS + null")
             case ";":
                 print("SEMICOLON ; null")
-            case "/":
-                print("DIV / null")
             case "*":
                 print("STAR * null")
             case _:
                 error_code = 65
                 line_number = (file_contents.count("\n", 0, file_contents.find(c)))
-                    print(
+                print(
                     f"[line {line_number}] Error: Unexpected character: {c}",
                     file=sys.stderr,
                 )
