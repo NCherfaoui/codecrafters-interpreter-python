@@ -55,7 +55,10 @@ def main():
             case _:
                 error_code = 65
                 line_number = (file_contents.count("\n", 0, file_contents.find(c)))
-                print(f"[line {line_number}] Erreur : Caractère inattendu : {c}", file=sys.stderr)
+                    print(
+                    f"[line {line_number}] Error: Unexpected character: {c}",
+                    file=sys.stderr,
+                )
     print("EOF  null")
 if __name__ == "__main__":
     main()
