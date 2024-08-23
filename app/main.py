@@ -52,11 +52,12 @@ def main():
                 print("STAR * null")
             case _:
                 error_code = 65
-                line_number = (file_contents.count("\n", 0, file_contents.find(c)+1))
+                line_number = (file_contents.count("\n", 0, file_contents.find(c)))+1
                 print(
                     f"[line {line_number}] Error: Unexpected character: {c}",
                     file=sys.stderr,
                 )
+                exit(error_code)
     print("EOF  null")
 if __name__ == "__main__":
     main()
