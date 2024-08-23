@@ -47,7 +47,7 @@ def main():
         if c == "/":
             print("DIV / null")
         if c == "*":
-            print("MULT * null")
+            print("STAR * null")
     print("EOF  null")
 if __name__ == "__main__":
     main()
