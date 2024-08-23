@@ -26,6 +26,10 @@ def main():
     #     print("EOF  null") # Placeholder, remove this line when implementing the scanner
 
     for c in file_contents:
+        if c == "(":
+            print("LEFT_PAREN ( null")
+        if c == ")":
+            print("RIGHT_PAREN ) null")
         if c == "{":
             print("LEFT_BRACE { null")
         if c == "}":
