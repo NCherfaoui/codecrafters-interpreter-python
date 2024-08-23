@@ -48,9 +48,9 @@ def main():
             print("DIV / null")
         if c == "*":
             print("STAR * null")
+        
         else:
             print(f"Error: Unexpected character: {c}", file=sys.stderr)
-            exit(1)
     print("EOF  null")
 if __name__ == "__main__":
     main()
