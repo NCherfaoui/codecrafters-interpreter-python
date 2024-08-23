@@ -1,7 +1,10 @@
 import sys
+error_code = 0
+
 
 
 def main():
+    global error_code
     # You can use print statements as follows for debugging, they'll be visible when running tests.
     print("Logs from your program will appear here!", file=sys.stderr)
 
@@ -26,31 +29,32 @@ def main():
     #     print("EOF  null") # Placeholder, remove this line when implementing the scanner
 
     for c in file_contents:
-        if c == "(":
-            print("LEFT_PAREN ( null")
-        if c == ")":
-            print("RIGHT_PAREN ) null")
-        if c == "{":
-            print("LEFT_BRACE { null")
-        if c == "}":
-            print("RIGHT_BRACE } null")
-        if c == ",":
-            print("COMMA , null")
-        if c == ".":
-            print("DOT . null")
-        if c == "-":
-            print("MINUS - null")
-        if c == "+":
-            print("PLUS + null")
-        if c == ";":
-            print("SEMICOLON ; null")
-        if c == "/":
-            print("DIV / null")
-        if c == "*":
-            print("STAR * null")
-        
-        else:
-            print(f"Error: Unexpected character: {c}", file=sys.stderr)
+        match c:
+            case "(":
+                print("LEFT_PAREN ( null")
+            case ")":
+                print("RIGHT_PAREN ) null")
+            case "{":
+                print("LEFT_BRACE { null")
+            case "}":
+                print("RIGHT_BRACE } null")
+            case ",":
+                print("COMMA , null")
+            case ".":
+                print("DOT . null")
+            case "-":
+                print("MINUS - null")
+            case "+":
+                print("PLUS + null")
+            case ";":
+                print("SEMICOLON ; null")
+            case "/":
+                print("DIV / null")
+            case "*":
+                print("STAR * null")
+            case _:
+                print(f"[line {error_code}] Erreur : Caractère inattendu : {c}", file=sys.stderr)
+                error_code += 1
     print("EOF  null")
 if __name__ == "__main__":
     main()
